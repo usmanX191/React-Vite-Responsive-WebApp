@@ -24,7 +24,7 @@ function ForgotPasswordMobileScreen(){
           <p className='text-white text-center text-3xl font-bold mt-5' style={{fontSize:"250%"}}>Forget Password</p>
           <p className='text-white text-center text-sm font-bold mt-5' style={{fontSize:"100%"}}>Reset your password to resume</p>
           <div className='text-center justify-center mt-5'>
-            <img src='/public/logo2.png' alt='' className='mx-auto' style={{ width: '209px', height: '158px' }} />
+            <img src='../assets/logo2.png' alt='' className='mx-auto' style={{ width: '209px', height: '158px' }} />
           </div>
 
             <form className='text-center' onSubmit={handleSubmit}>
@@ -78,13 +78,13 @@ function ForgotPasswordDesktopScreen(){
   return (
     <div className='bg-gray-200 min-h-screen w-screen overflow-y-auto flex py-5 px-5 align-middle justify-center items-center'>
         <div className='bg-white h-[600px] flex-col w-[1280px] px-5 py-5'>
-            <img src="/public/logo1.png" className='mt-1' style={{height:"10%", width:"8%"}}/>
+            <img src="../assets/logo1.png" className='mt-1' style={{height:"10%", width:"8%"}}/>
             <div className='relative grid grid-cols-2 gap-4 h-auto text-center justify-center' style={{marginLeft:"10%",marginRight:"1.5%" }} >
               
               <div className=''>
                 <p className='text-emerald-400 font-extrabold text-4xl'>Welcome</p>
                 <p className='text-emerald-400 mt-4 font-extrabold text-base'>Start your journey with us.</p>
-                <img src='/public/logo2.png' alt='main-pic' className='absolute z-0 items-center justify-center ml-8 h-[300px] w-[654px] mt-12' style={{width:"60%"}}/>
+                <img src='../assets/logo2.png' alt='main-pic' className='absolute z-0 items-center justify-center ml-8 h-[300px] w-[654px] mt-12' style={{width:"60%"}}/>
               </div>
               
               <div className=''>
@@ -115,7 +115,7 @@ function ForgotPasswordDesktopScreen(){
                 </div>
               </div>
             </div>
-                <img src="/public/logo3.png" className='relative' style={{height:"10%", width:"8%",marginTop:"2%", marginBottom:"2%",  marginLeft:"91%"}}/>
+                <img src="../assets/logo3.png" className='relative' style={{height:"10%", width:"8%",marginTop:"2%", marginBottom:"2%",  marginLeft:"91%"}}/>
         </div>
     </div>
   );
