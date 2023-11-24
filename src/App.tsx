@@ -8,9 +8,9 @@ function App() {
   
   return (
     <>
-    <Router basename='React-Vite-Responsive-WebApp'>
+    <Router basename='React-Vite-Responsive-WebApp' >
       <Routes>
-      <Route path="/login" Component={LoginScreen} />
+      <Route path="/" Component={LoginScreen} />
       <Route path="/forgotpassword" Component={ForgotPasswordScreen}/>
       {/* <Route path="/dashboard" Component={Dashboard}/> */}
       </Routes>
