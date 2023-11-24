@@ -48,7 +48,7 @@ function ForgotPasswordMobileScreen(){
               style={{fontSize:"100%"}}
               onClick={() => {
                 // Add your logic for handling the button click, such as dialing the phone number
-                navigate('/')
+                navigate('//')
               }}
             >
               Login
@@ -107,7 +107,7 @@ function ForgotPasswordDesktopScreen(){
                 </form>
                 <button className='text-center text-base font-semibold text-white hover:text-blue-600' style={{marginTop:"5%"}} onClick={() => {
                 // Add your logic for handling the button click, such as dialing the phone number
-                navigate('/')
+                navigate('//')
                 }}>Login</button>
                 </div>
                 </div>
