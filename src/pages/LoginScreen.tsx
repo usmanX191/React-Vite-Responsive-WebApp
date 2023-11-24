@@ -29,7 +29,7 @@ function MobileLoginScreen(){
           <p className='text-white text-center text-3xl font-bold mt-5' style={{fontSize:"250%"}}>Welcome</p>
           <p className='text-white text-center text-sm font-bold mt-5' style={{fontSize:"100%"}}>Start your journey with us.</p>
           <div className='text-center justify-center mt-5'>
-            <img src='../images/logo2.png' alt='' className=' mx-auto  align-middle items-center' style={{ width: '209px', height: '158px',borderRadius:'224.5px' }} />
+            <img src='../images/logo2.png' alt='' className='mx-auto  align-middle items-center' style={{ width: '209px', height: '158px',borderRadius:'224.5px' }} />
           </div>
 
             <form className='text-center' onSubmit={handleSubmit}>
