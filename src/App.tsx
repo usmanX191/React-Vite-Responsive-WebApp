@@ -10,7 +10,7 @@ function App() {
     <>
     <Router basename='React-Vite-Responsive-WebApp'>
       <Routes>
-      <Route path="/" Component={LoginScreen} />
+      <Route path="/login" Component={LoginScreen} />
       <Route path="/forgotpassword" Component={ForgotPasswordScreen}/>
       {/* <Route path="/dashboard" Component={Dashboard}/> */}
       </Routes>
