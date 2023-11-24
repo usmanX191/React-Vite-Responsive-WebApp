@@ -29,7 +29,7 @@ function MobileLoginScreen(){
           <p className='text-white text-center text-3xl font-bold mt-5' style={{fontSize:"250%"}}>Welcome</p>
           <p className='text-white text-center text-sm font-bold mt-5' style={{fontSize:"100%"}}>Start your journey with us.</p>
           <div className='text-center justify-center mt-5'>
-            <img src='../images/logo2.png' alt='' className='mx-auto  align-middle items-center' style={{ width: '209px', height: '158px',borderRadius:'224.5px' }} />
+            <img src='/logo2.png' alt='' className='mx-auto  align-middle items-center' style={{ width: '209px', height: '158px',borderRadius:'224.5px' }} />
           </div>
 
             <form className='text-center' onSubmit={handleSubmit}>
@@ -103,13 +103,13 @@ function DesktopLoginScreen(){
     <>
     <div className='bg-gray-200 min-h-screen w-screen overflow-y-auto flex align-middle justify-center items-center'>
         <div className='bg-white h-[570px] flex-col w-[850px] px-5 py-5 mt-5 mb-5'>
-            <img src="../images/logo1.png" className='mt-1' style={{height:"12%", width:"10%"}}/>
+            <img src="/logo1.png" className='mt-1' style={{height:"12%", width:"10%"}}/>
             <div className=' relative grid grid-cols-2 gap-4 h-auto text-center justify-center' style={{marginLeft:"10%",marginRight:"1.5%" }} >
               
               <div className=''>
                 <p className='-ml-6 font-extrabold text-3xl' style={{color:'rgba(78, 198, 163, 1)'}}>Welcome</p>
                 <p className='-ml-10 mt-2 font-bold text-base' style={{color:'rgba(78, 198, 163, 1)'}}>Start your journey with us.</p>
-                <img src='../images/logo2.png' alt='main-pic' className='absolute items-center justify-center -ml-12 h-[296px] w-[520px] mt-10'/>
+                <img src='/logo2.png' alt='main-pic' className='absolute items-center justify-center -ml-12 h-[296px] w-[520px] mt-10'/>
               </div>
               
               <div className=''>
@@ -152,7 +152,7 @@ function DesktopLoginScreen(){
                 </div>
               </div>
             </div>
-                <img src="../images/logo3.png" className='relative' style={{height:"10%", width:"10%",marginTop:"3%", marginBottom:"1%",  marginLeft:"89%"}}/>
+                <img src="/logo3.png" className='relative' style={{height:"10%", width:"10%",marginTop:"3%", marginBottom:"1%",  marginLeft:"89%"}}/>
         </div>
     </div>
     </>
