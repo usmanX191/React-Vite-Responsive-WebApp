@@ -11,8 +11,9 @@ function ForgotPasswordMobileScreen(){
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
     
+      alert('We have sent you an email to Reset your password');
+      e.preventDefault();
     // You can handle form submission here, e.g., validate and send data to the server.
   };
   return(
@@ -71,7 +72,8 @@ function ForgotPasswordDesktopScreen(){
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+      alert('We have sent you an email to Reset your password');
+      e.preventDefault();
     
     // You can handle form submission here, e.g., validate and send data to the server.
   };

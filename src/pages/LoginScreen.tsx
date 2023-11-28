@@ -92,9 +92,17 @@ function DesktopLoginScreen(){
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if(email.toLocaleLowerCase() === 'usman@gmail.com' && password === "usman12345"){
-        navigate("/dashboard");
+    if (email.toLowerCase() === '' && password.length > 0) {
+      alert("Email isn't entered, please enter your Email");
+    } else if (email.toLowerCase().length > 0 && password === '') {
+      alert("Password isn't entered, please enter your Password");
+    } else if (email.toLowerCase() === 'usman@gmail.com' && password === 'usman12345') {
+      navigate('/dashboard', { replace: true });
+      alert('Sign in Successfully!!!');
+    } else {
+      alert('Entered email/password is incorrect, please try Again!!!');
     }
+
     // You can handle form submission here, e.g., validate and send data to the server.
   };
 

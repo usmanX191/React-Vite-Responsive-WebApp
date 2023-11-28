@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginScreen from './pages/LoginScreen';
 import ForgotPasswordScreen from './pages/ForgotPassword';
-// import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard';
 import './App.css';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Routes>
       <Route path="/" Component={LoginScreen} />
       <Route path="/forgotpassword" Component={ForgotPasswordScreen}/>
-      {/* <Route path="/dashboard" Component={Dashboard}/> */}
+      <Route path="/dashboard" Component={Dashboard}/>
       </Routes>
     </Router>
     </>

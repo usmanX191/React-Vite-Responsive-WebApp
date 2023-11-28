@@ -1,80 +1,169 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
-// import { AiFillHome, AiFillHeart } from 'react-icons/ai';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-// import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
+import { AiFillHome, AiFillHeart } from 'react-icons/ai';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faShareSquare } from '@fortawesome/free-solid-svg-icons';
+import { HiBellAlert } from "react-icons/hi2";
+import { IoMdSettings } from "react-icons/io";
+import { FaPlus } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
-// const Dashboard: React.FC = () => {
+
+const Dashboard: React.FC = () => {
 //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-//   const [home,setHome] = useState<Boolean>(false);
-//   const [myfiles,setMyFiles] = useState<Boolean>(false);
-//   const [fav,setFav] = useState<Boolean>(false);
-//   const [share,setShare] = useState<Boolean>(false);
+  const [home,setHome] = useState<boolean>(true);
+  const [myfiles,setMyFiles] = useState<boolean>(false);
+  const [fav,setFav] = useState<boolean>(false);
+  const [share,setShare] = useState<boolean>(false);
+  const [signInPopup,setSignInPopup] = useState<boolean>(false);
 
-//   const handleHome = () => {
-//     if(home===false){
-//       setHome(true);
-//       setMyFiles(false);
-//       setFav(false);
-//       setShare(false);
-//     }
-//   }
-//   const handleMyFiles = () => {
-//     if(myfiles===false){
-//       setHome(false);
-//       setMyFiles(true);
-//       setFav(false);
-//       setShare(false);
-//     }
-//   }
-//   const handleFav = () => {
-//     if(fav===false){
-//       setHome(false);
-//       setMyFiles(false);
-//       setFav(true);
-//       setShare(false);
-//     }
-//   }
-//   const handleShare = () => {
-//     if(share===false){
-//       setHome(false);
-//       setMyFiles(false);
-//       setFav(false);
-//       setShare(true);
-//     }
-//   }
+  const handleHome = () => {
+    if(home===false){
+      setHome(true);
+      setMyFiles(false);
+      setFav(false);
+      setSignInPopup(false);
+      setShare(false);
+    }
+  }
+  const handleMyFiles = () => {
+    if(myfiles===false){
+      setHome(false);
+      setMyFiles(true);
+      setFav(false);
+      setSignInPopup(false);
+      setShare(false);
+    }
+  }
+  const handleFav = () => {
+    if(fav===false){
+      setHome(false);
+      setMyFiles(false);
+      setFav(true);
+      setSignInPopup(false);
+      setShare(false);
+    }
+  }
+  const handleShare = () => {
+    if(share===false){
+      setHome(false);
+      setMyFiles(false);
+      setFav(false);
+      setSignInPopup(false);
+      setShare(true);
+    }
+  }
 
-//   return (
-//     <div className='bg-gray-200 h-screen w-full'>
-//       <div className='flex'>
-//         <div className='flex-col w-[382px] h-[651px] bg-emerald-400 shadow-xl'>
-//             <div className='justify-center'><p className='text-center mt-10 text-white text-5xl font-bold '> LOGO </p></div>
-//             <div className='mt-20 px-8'>
-//                 {home ? (<div className='cursor-pointer'><div className='-ml-8 w-2 absolute h-20 text-center bg-white'> </div><div className='flex text-center p-6'> <p className='inline-block'><AiFillHome size={35} style={{ color: 'white' }}/></p><p  className='inline-block text-2xl text-white hover:text-white font-bold ml-5 mb-3'>Home</p></div></div>) :
+  // const handlePopup = () => {
+  //   setSignInPopup(!(signInPopup));
+  // }
+  
 
-//                   (<div className='cursor-pointer' onClick={handleHome}><div className='flex text-center p-6'><p className='inline-block'><AiFillHome size={35} className="text-teal-100 hover:text-white" /></p><p  className='inline-block text-2xl text-teal-100 hover:text-white font-bold ml-5 mb-3'>Home</p></div></div>)}
+  return (
+    <div className='2xl:block xs:hidden bg-gray-200 h-screen w-full' >
+      <div className='flex'>
+        <div className='flex-col h-screen bg-[rgba(83, 199, 165, 1)] shadow-xl' style={{width:'26.5%',backgroundColor:'rgba(83, 199, 165, 1)',filter:'drop-shadow(4px 4px 4px #007352)'}}>
+            <div className='w-full h-[87px] justify-center items-center' style={{marginTop:'40px'}}><p className='text-center text-white text-3xl font-bold' style={{fontFamily:'Inter', fontSize: '36px', fontStyle:'normal',fontWeight:'70%', lineHeight:'normal', letterSpacing:'0.65px'}}> LOGO </p></div>
+            <div className='px-8' style={{marginTop:'10%'}}>
+                {home ? (<div className='cursor-pointer items-center'><div className='-ml-8 w-[7px] mt-2 absolute h-[80px] text-center bg-white'></div><div className='flex text-center py-8'><p className='inline-block'><AiFillHome size={35} style={{ color: 'white' }}/></p><p className='inline-block mt-2 text-white hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Home</p></div></div>) :
+
+                  (<div className='cursor-pointer items-center' onClick={handleHome}><div className='-ml-8 flex text-center p-8'><p className='inline-block'><AiFillHome size={35} className="text-teal-100 hover:text-white" /></p><p  className='inline-block mt-2 text-teal-100 hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Home</p></div></div>)}
                 
-//                 {myfiles ? (<div className='cursor-pointer'><div className='-ml-8 w-2 absolute h-20 text-center bg-white'> </div><div className='flex text-center p-6'> <p className='inline-block'><FontAwesomeIcon icon={faBriefcase} color='white' size="2x" /></p><p  className='inline-block text-2xl text-white hover:text-white font-bold ml-5 mb-3'>My Files</p></div></div>) :
+                {myfiles ? (<div className='cursor-pointer items-center -mt-10'><div className='-ml-8 w-[7px] mt-2 absolute h-[80px] text-center bg-white'></div><div className='flex text-center py-8'><p className='inline-block'><FontAwesomeIcon icon={faBriefcase} color='white' size="2x" /></p><p className='inline-block mt-1 text-white hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>My Files</p></div></div>) :
 
-//                   (<div className='cursor-pointer' onClick={handleMyFiles}><div className='flex text-center p-6'><p className='inline-block'><FontAwesomeIcon className="text-teal-100 hover:text-white" icon={faBriefcase} color='white' size="2x" /></p><p  className='inline-block text-2xl text-teal-100 hover:text-white font-bold ml-5 mb-3'>My Files</p></div></div>)}
+                  (<div className='cursor-pointer items-center -mt-10' onClick={handleMyFiles}><div className='-ml-8 flex text-center p-8'><p className='inline-block'><FontAwesomeIcon className="text-teal-100 hover:text-white" icon={faBriefcase} color='white' size="2x" /></p><p  className='inline-block mt-1 text-teal-100 hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>My Files</p></div></div>)}
 
-//                 {fav ? (<div className='cursor-pointer'><div className='-ml-8 w-2 absolute h-20 text-center bg-white'> </div><div className='flex text-center p-6'> <p className='inline-block'><AiFillHeart size={35} style={{ color: 'white' }}/></p><p  className='inline-block text-2xl text-white hover:text-white font-bold ml-5 mb-3'>Fav</p></div></div>) :
+                {fav ? (<div className='cursor-pointer items-center -mt-10'><div className='-ml-8 w-[7px] mt-2 absolute h-[80px] text-center bg-white'></div><div className='flex text-center py-8'><p className='inline-block'><AiFillHeart size={35} style={{ color: 'white' }}/></p><p className='inline-block mt-1 text-white hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Fav</p></div></div>) :
 
-//                   (<div className= 'cursor-pointer' onClick={handleFav}><div className='flex text-center p-6'><p className='inline-block'><AiFillHeart size={35} className="text-teal-100 hover:text-white" /></p><p  className='inline-block text-2xl text-teal-100 hover:text-white font-bold ml-5 mb-3'>Fav</p></div></div>)}
+                    (<div className='cursor-pointer items-center -mt-10' onClick={handleFav}><div className='-ml-8 flex text-center p-8'><p className='inline-block'><AiFillHeart size={35} className="text-teal-100 hover:text-white" /></p><p  className='inline-block mt-1 text-teal-100 hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Fav</p></div></div>)}
                 
-//                 {share ? (<div className='cursor-pointer'><div className='-ml-8 w-2 absolute h-20 text-center bg-white'> </div><div className='flex text-center p-6'> <p className='inline-block'><FontAwesomeIcon icon={faShareSquare} color='white' size="2x" /></p><p  className='inline-block text-2xl text-white hover:text-white font-bold ml-5 mb-3'>Shared with me</p></div></div>) :
+                {share ? (<div className='cursor-pointer items-center -mt-10'><div className='-ml-8 w-[7px] mt-2 absolute h-[80px] text-center bg-white'></div><div className='flex text-center py-8'><p className='inline-block'><FontAwesomeIcon icon={faShareSquare} color='white' size="2x" /></p><p className='inline-block mt-1 text-white hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Shared with me</p></div></div>) :
 
-//                   (<div className='cursor-pointer' onClick={handleShare}><div className='flex text-center p-6'><p className='inline-block'><FontAwesomeIcon className="text-teal-100 hover:text-white" icon={faShareSquare} color='white' size="2x" /></p><p  className='inline-block text-2xl text-teal-100 hover:text-white font-bold ml-5 mb-3'>Shared with me</p></div></div>)}
-//             </div>
-//         </div>
-//         <div>
+                    (<div className='cursor-pointer items-center -mt-10' onClick={handleShare}><div className='-ml-8 flex text-center p-8'><p className='inline-block'><FontAwesomeIcon className="text-teal-100 hover:text-white" icon={faShareSquare} color='white' size="2x" /></p><p  className='inline-block mt-1 text-teal-100 hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Shared with me</p></div></div>)}
+            </div>
+        </div>
+        <div>
+        </div>
+        
+        <div className='bg-gray-200' style={{backgroundColor:'rgba(242, 242, 242, 1)' ,width:'73.5%'}}>
+        <div className=''>
+          <div className='mt-[20px] ml-[65px]'>
+            <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>My Drive, </h1><br/>
+            <h2 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+            <h3 className='font-bold' style={{marginTop:'40px',color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}>All Assets</h3>
+          </div>
+          <div className='fixed right-5 top-0'>
+              <div className='flex flex-col'>
+              <div className='grid grid-cols-3'>
+                <div className='cursor-pointer mr-[32px] mt-[45px] w-[40px] h-[40px] items-center justify-center py-2 px-2 hover:bg-teal-300' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', background:'white', boxShadow:'0px 4px 6px 2px rgba(0, 0, 0, 0.25)'}}><HiBellAlert size={25} className= 'items-center justify-center' /></div>
+                <div className='cursor-pointer mr-[32px] mt-[45px] w-[40px] h-[40px] items-center justify-center py-2 px-2' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', background:'white', boxShadow:'0px 4px 6px 2px rgba(0, 0, 0, 0.25)'}}><IoMdSettings size={25} className= 'items-center justify-center' /></div>
+                <div className='cursor-pointer mr-[34px] mt-[45px] w-[40px] h-[40px] items-center justify-center' onClick={() => setSignInPopup(!(signInPopup))} style={{borderRadius:'10px', background:'', boxShadow:'0px 4px 6px 2px rgba(0, 0, 0, 0.25)'}}><img src='./image.png' className='w-full h-full object-cover' style={{borderRadius:'10px'}}/></div>
+              </div>
+              {signInPopup && (
+              <div className="absolute top-full h-70 xs:w-auto right-0 mr-9 p-2 bg-gray-300 text-black rounded-lg" style={{top:'47%',borderRadius:'10px'}} onMouseEnter={() => setSignInPopup(true)} onMouseLeave={() => setSignInPopup(false)}>
+                <button className="w-[200px] hover:bg-green-600 bg-blue-400 text-center p-2 text-white font-semibold text-base py-4 px-5" style={{borderRadius:'10px'}}>
+                  Account Information
+                </button>
+                <button className="w-[200px] text-center mt-1 hover:font-extrabold hover:bg-red-600 bg-blue-400 text-white font-semibold text-lg py-4 px-5" style={{borderRadius:'10px'}} onClick={() => navigate('/', { replace: true }) }>
+                  Sign Out
+                </button>
+                
+              </div>)}
 
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+              <div className='cursor-pointer hover:bg-teal-700 bg-[#7FD3BB] mt-[50px] -ml-12 w-[240px] h-[65px] py-5 px-20' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', alignItems:'center', justifyContent:'center'}}><button className='text-white items-center justify-center'><FaPlus className='inline-block text-white' color='white' size={10} /> Add New </button></div>
+            </div>
+          </div>
+        </div>
 
-// export default Dashboard;
+        <table className="fixed border-collapse w-2/3" style={{ marginTop: '20%', marginRight: '2%', marginLeft: '3.5%',marginBottom:'5%' }}>
+      <thead>
+        <tr className="bg-gray-200">
+          <th className="border border-green-500 px-2 py-1 font-bold text-black text-left" style={{width:'15%',paddingTop:'0.9%',paddingBottom:'0.9%'}}>Name</th>
+          <th className="border border-green-500 px-2 py-1 font-bold text-black text-left" style={{width:'15%'}}>Size</th>
+          <th className="border border-green-500 px-2 py-1 font-bold text-black text-left" style={{width:'15%'}}>Date Modified</th>
+          <th className="border border-green-500 px-2 py-1 font-bold text-black text-left" style={{width:'15%'}}>Shared with/by</th>
+          <th className="border border-green-500 px-2 py-1 font-bold text-black text-left" style={{width:'15%'}}></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className="bg-white">
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+        </tr>
+        <tr className="bg-white">
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+        </tr>
+        <tr className="bg-white">
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+        </tr>
+        <tr className="bg-white">
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+        </tr>
+      </tbody>
+    </table>
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Dashboard;
