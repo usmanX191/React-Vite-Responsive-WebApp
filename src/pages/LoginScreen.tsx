@@ -98,7 +98,6 @@ function DesktopLoginScreen(){
       alert("Password isn't entered, please enter your Password");
     } else if (email.toLowerCase() === 'usman@gmail.com' && password === 'usman12345') {
       navigate('/dashboard', { replace: true });
-      alert('Sign in Successfully!!!');
     } else {
       alert('Entered email/password is incorrect, please try Again!!!');
     }

@@ -63,9 +63,10 @@ const Dashboard: React.FC = () => {
   
 
   return (
-    <div className='2xl:block xs:hidden bg-gray-200 h-screen w-full' >
-      <div className='flex'>
-        <div className='flex-col h-screen bg-[rgba(83, 199, 165, 1)] shadow-xl' style={{width:'26.5%',backgroundColor:'rgba(83, 199, 165, 1)',filter:'drop-shadow(4px 4px 4px #007352)'}}>
+    <div className='2xl:block xs:hidden bg-gray-200 h-screen w-full ' >
+      <div className='flex '>
+        <div className='flex-col min-h-fit bg-[rgba(83, 199, 165, 1)] shadow-xl' style={{width:'26.5%',backgroundColor:'rgba(83, 199, 165, 1)',filter:'drop-shadow(4px 4px 4px #007352)'}}>
+          <div className='overflow-y-auto'>
             <div className='w-full h-[87px] justify-center items-center' style={{marginTop:'40px'}}><p className='text-center text-white text-3xl font-bold' style={{fontFamily:'Inter', fontSize: '36px', fontStyle:'normal',fontWeight:'70%', lineHeight:'normal', letterSpacing:'0.65px'}}> LOGO </p></div>
             <div className='px-8' style={{marginTop:'10%'}}>
                 {home ? (<div className='cursor-pointer items-center'><div className='-ml-8 w-[7px] mt-2 absolute h-[80px] text-center bg-white'></div><div className='flex text-center py-8'><p className='inline-block'><AiFillHome size={35} style={{ color: 'white' }}/></p><p className='inline-block mt-2 text-white hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Home</p></div></div>) :
@@ -83,19 +84,20 @@ const Dashboard: React.FC = () => {
                 {share ? (<div className='cursor-pointer items-center -mt-10'><div className='-ml-8 w-[7px] mt-2 absolute h-[80px] text-center bg-white'></div><div className='flex text-center py-8'><p className='inline-block'><FontAwesomeIcon icon={faShareSquare} color='white' size="2x" /></p><p className='inline-block mt-1 text-white hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Shared with me</p></div></div>) :
 
                     (<div className='cursor-pointer items-center -mt-10' onClick={handleShare}><div className='-ml-8 flex text-center p-8'><p className='inline-block'><FontAwesomeIcon className="text-teal-100 hover:text-white" icon={faShareSquare} color='white' size="2x" /></p><p  className='inline-block mt-1 text-teal-100 hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Shared with me</p></div></div>)}
-            </div>
+          </div>
+        </div>
         </div>
         <div>
         </div>
         
-        <div className='bg-gray-200' style={{backgroundColor:'rgba(242, 242, 242, 1)' ,width:'73.5%'}}>
-        <div className=''>
-          <div className='mt-[20px] ml-[65px]'>
+        <div className='bg-gray-200 min-h-screen' style={{backgroundColor:'rgba(242, 242, 242, 1)' , width:'73.5%'}}>
+        {home && (<><div className='flex'>
+          <div className='mt-[30px] ml-[65px]'>
             <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>My Drive, </h1><br/>
-            <h2 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+            <h2 className='font-semibold -mt-3' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
             <h3 className='font-bold' style={{marginTop:'40px',color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}>All Assets</h3>
           </div>
-          <div className='fixed right-5 top-0'>
+          <div className='right-0 top-0' style={{position:'absolute'}}>
               <div className='flex flex-col'>
               <div className='grid grid-cols-3'>
                 <div className='cursor-pointer mr-[32px] mt-[45px] w-[40px] h-[40px] items-center justify-center py-2 px-2 hover:bg-teal-300' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', background:'white', boxShadow:'0px 4px 6px 2px rgba(0, 0, 0, 0.25)'}}><HiBellAlert size={25} className= 'items-center justify-center' /></div>
@@ -118,7 +120,7 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        <table className="fixed border-collapse w-2/3" style={{ marginTop: '20%', marginRight: '2%', marginLeft: '3.5%',marginBottom:'5%' }}>
+        <table className="relative border-collapse" style={{width:'90%', marginTop: '30%', marginRight: '2%', marginLeft: '6%',marginBottom:'5%' }}>
       <thead>
         <tr className="bg-gray-200">
           <th className="border border-green-500 px-2 py-1 font-bold text-black text-left" style={{width:'15%',paddingTop:'0.9%',paddingBottom:'0.9%'}}>Name</th>
@@ -158,8 +160,25 @@ const Dashboard: React.FC = () => {
           <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
         </tr>
       </tbody>
-    </table>
-
+    </table></>)}
+    {myfiles && (<>
+      <div className='mt-[30px] ml-[65px]'>
+            <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>My Files, </h1><br/>
+            <h2 className='font-semibold -mt-3' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+          </div>
+    </>)}
+    {fav && (<>
+      <div className='mt-[30px] ml-[65px]'>
+            <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>My Favourites, </h1><br/>
+            <h2 className='font-semibold -mt-3' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+          </div>
+    </>)}
+    {share && (<>
+      <div className='mt-[30px] ml-[65px]'>
+            <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>Shared Files Page,</h1><br/>
+            <h2 className='font-semibold -mt-3' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+          </div>
+    </>)}    
         </div>
       </div>
     </div>
