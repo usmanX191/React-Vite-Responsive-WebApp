@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => {
                 <button className="w-[200px] hover:bg-green-600 bg-blue-400 text-center p-2 text-white font-semibold text-base py-4 px-5" style={{borderRadius:'10px'}}>
                   Account Information
                 </button>
-                <button className="w-[200px] text-center mt-1 hover:font-extrabold hover:bg-red-600 bg-blue-400 text-white font-semibold text-lg py-4 px-5" style={{borderRadius:'10px'}} onClick={() => navigate('/', { replace: true }) }>
+                <button className="w-[200px] text-center mt-1 hover:font-extrabold hover:bg-red-600 bg-blue-400 text-white font-semibold text-lg py-4 px-5" style={{borderRadius:'10px'}} onClick={() => navigate('//', { replace: true }) }>
                   Sign Out
                 </button>
                 
