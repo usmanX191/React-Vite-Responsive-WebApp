@@ -95,7 +95,7 @@ const Dashboard: React.FC = () => {
           <div className='mt-[40px] ml-[65px]'>
             <h1 className='font-extrabold' style={{color:'#0E0F0E', fontSize:'34px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.64px'}}>My Drive, </h1><br/>
             <h2 className='font-extrabold -mt-2' style={{color:'#0E0F0E', fontSize:'28px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
-            <h3 className='font-extrabold' style={{marginTop:'40px',color:'#0E0F0E', fontSize:'28px', fontStyle:'extra-bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}>All Assets</h3>
+            <h3 className='font-extrabold' style={{marginTop:'40px',color:'#0E0F0E', fontSize:'28px', fontStyle:'extra-bold', fontWeight:'750', lineHeight:'normal',letterSpacing:'0.48px'}}>All Assets</h3>
           </div>
           <div className='right-0 top-1' style={{position:'absolute'}}>
               <div className='flex flex-col'>
@@ -115,7 +115,7 @@ const Dashboard: React.FC = () => {
                 
               </div>)}
 
-              <div className='cursor-pointer hover:bg-teal-700 bg-[#7FD3BB] mt-[65px] -ml-6 w-[220px] h-[65px] py-5 px-16' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', alignItems:'center', justifyContent:'center'}}><button className='text-white font-bold items-center justify-center'><FaPlus className='inline-block text-white font-bold' color='white' size={10} /> Add New </button></div>
+              <div className='cursor-pointer hover:bg-teal-700 bg-[#7FD3BB] mt-[65px] -ml-8 w-[220px] h-[65px] py-5 px-16' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', alignItems:'center', justifyContent:'center'}}><button className='text-white font-bold items-center justify-center'><FaPlus className='inline-block text-white font-bold' color='white' size={10} /> Add New </button></div>
             </div>
           </div>
         </div>
@@ -132,52 +132,46 @@ const Dashboard: React.FC = () => {
       </thead>
       <tbody>
         <tr className="bg-white">
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
         </tr>
         <tr className="bg-white">
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
         </tr>
         <tr className="bg-white">
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
+          <td className="border border-green-500 px-2 py-1" style={{padding:'1.7%'}}></td>
         </tr>
-        <tr className="bg-white">
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-          <td className="border border-green-500 px-2 py-1" style={{padding:'1.8%'}}></td>
-        </tr>
+        
       </tbody>
     </table></>)}
     {myfiles && (<>
-      <div className='mt-[30px] ml-[65px]'>
-            <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>My Files, </h1><br/>
-            <h2 className='font-semibold -mt-3' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
-          </div>
+      <div className='mt-[40px] ml-[65px]'>
+            <h1 className='font-extrabold' style={{color:'#0E0F0E', fontSize:'34px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.64px'}}>My Files, </h1><br/>
+            <h2 className='font-extrabold -mt-2' style={{color:'#0E0F0E', fontSize:'28px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+      </div>
     </>)}
     {fav && (<>
-      <div className='mt-[30px] ml-[65px]'>
-            <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>My Favourites, </h1><br/>
-            <h2 className='font-semibold -mt-3' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
-          </div>
+      <div className='mt-[40px] ml-[65px]'>
+            <h1 className='font-extrabold' style={{color:'#0E0F0E', fontSize:'34px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.64px'}}>My Favourites, </h1><br/>
+            <h2 className='font-extrabold -mt-2' style={{color:'#0E0F0E', fontSize:'28px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+      </div>
     </>)}
     {share && (<>
-      <div className='mt-[30px] ml-[65px]'>
-            <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>Shared Files Page,</h1><br/>
-            <h2 className='font-semibold -mt-3' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
-          </div>
+      <div className='mt-[40px] ml-[65px]'>
+            <h1 className='font-extrabold' style={{color:'#0E0F0E', fontSize:'34px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.64px'}}>Shared Files Page, </h1><br/>
+            <h2 className='font-extrabold -mt-2' style={{color:'#0E0F0E', fontSize:'28px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+      </div>
     </>)}    
         </div>
       </div>
