@@ -7,7 +7,7 @@ export default {
         'xs': '10px', // Define your custom 375px breakpoint
         'sm': '360px',
         'md': '860px',
-        '2xl': '1300px',
+        '2xl': '1025px',
       },
     },
   },
