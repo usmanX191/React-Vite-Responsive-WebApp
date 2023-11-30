@@ -63,7 +63,7 @@ const Dashboard: React.FC = () => {
   
 
   return (
-    <div className='2xl:block xs:hidden bg-gray-200 h-screen w-full ' >
+    <div className='2xl:block xs:hidden bg-gray-200 h-screen w-full' >
       <div className='flex '>
         <div className='flex-col min-h-fit bg-[rgba(83, 199, 165, 1)] shadow-xl' style={{width:'26.5%',backgroundColor:'rgba(83, 199, 165, 1)',filter:'drop-shadow(4px 4px 4px #007352)'}}>
           <div className='overflow-y-auto'>
@@ -115,7 +115,7 @@ const Dashboard: React.FC = () => {
                 
               </div>)}
 
-              <div className='cursor-pointer hover:bg-teal-700 bg-[#7FD3BB] mt-[65px] -ml-8 w-[220px] h-[65px] py-5 px-16' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', alignItems:'center', justifyContent:'center'}}><button className='text-white font-bold items-center justify-center'><FaPlus className='inline-block text-white font-bold' color='white' size={10} /> Add New </button></div>
+              <div className='cursor-pointer hover:bg-teal-700 bg-[#7FD3BB] mt-[65px] -ml-8 w-[220px] h-[65px] py-5 px-16' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', alignItems:'center', justifyContent:'center'}}><button className='text-white font-bold items-center justify-center'> <FaPlus className='inline-block text-white font-bold' color='white' size={10} /> Add New </button></div>
             </div>
           </div>
         </div>
