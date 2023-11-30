@@ -93,9 +93,9 @@ const Dashboard: React.FC = () => {
         <div className='bg-gray-200 min-h-screen' style={{backgroundColor:'rgba(242, 242, 242, 1)' , width:'73.5%'}}>
         {home && (<><div className='flex'>
           <div className='mt-[30px] ml-[65px]'>
-            <h1 className='font-semibold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'32px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.64px'}}>My Drive, </h1><br/>
-            <h2 className='font-semibold -mt-3' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'600', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
-            <h3 className='font-bold' style={{marginTop:'40px',color:'#0E0F0E', fontFamily:'Inter', fontSize:'24px', fontStyle:'normal', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}>All Assets</h3>
+            <h1 className='font-extrabold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'34px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.64px'}}>My Drive, </h1><br/>
+            <h2 className='font-extrabold -mt-1' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'28px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
+            <h3 className='font-extrabold' style={{marginTop:'40px',color:'#0E0F0E', fontFamily:'Inter', fontSize:'28px', fontStyle:'extra-bold', fontWeight:'800', lineHeight:'normal',letterSpacing:'0.48px'}}>All Assets</h3>
           </div>
           <div className='right-0 top-0' style={{position:'absolute'}}>
               <div className='flex flex-col'>
