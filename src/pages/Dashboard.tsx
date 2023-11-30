@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
       <div className='flex '>
         <div className='flex-col min-h-fit bg-[rgba(83, 199, 165, 1)] shadow-xl' style={{width:'26.5%',backgroundColor:'rgba(83, 199, 165, 1)',filter:'drop-shadow(4px 4px 4px #007352)'}}>
           <div className='overflow-y-auto'>
-            <div className='w-full h-[87px] justify-center items-center' style={{marginTop:'40px'}}><p className='text-center text-white text-3xl font-bold' style={{fontFamily:'Inter', fontSize: '36px', fontStyle:'normal',fontWeight:'70%', lineHeight:'normal', letterSpacing:'0.65px'}}> LOGO </p></div>
+            <div className='w-full h-[87px] flex justify-center items-center align-middle' style={{textAlign:'center',alignItems:'center',marginTop:'40px'}}><p className='text-center text-white text-3xl font-bold' style={{fontFamily:'Inter', fontSize: '36px', fontStyle:'normal',fontWeight:'70%', lineHeight:'normal', letterSpacing:'0.65px'}}> LOGO </p></div>
             <div className='px-8' style={{marginTop:'10%'}}>
                 {home ? (<div className='cursor-pointer items-center'><div className='-ml-8 w-[7px] mt-2 absolute h-[80px] text-center bg-white'></div><div className='flex text-center py-8'><p className='inline-block'><AiFillHome size={35} style={{ color: 'white' }}/></p><p className='inline-block mt-2 text-white hover:text-white ml-5 mb-3'  style={{fontFamily:'Inter', fontSize: '22px', fontStyle:'normal',fontWeight:'60%', lineHeight:'normal'}}>Home</p></div></div>) :
 
@@ -92,12 +92,12 @@ const Dashboard: React.FC = () => {
         
         <div className='bg-gray-200 min-h-screen' style={{backgroundColor:'rgba(242, 242, 242, 1)' , width:'73.5%'}}>
         {home && (<><div className='flex'>
-          <div className='mt-[30px] ml-[65px]'>
+          <div className='mt-[40px] ml-[65px]'>
             <h1 className='font-extrabold' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'34px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.64px'}}>My Drive, </h1><br/>
             <h2 className='font-extrabold -mt-1' style={{color:'#0E0F0E', fontFamily:'Inter', fontSize:'28px', fontStyle:'bold', fontWeight:'700', lineHeight:'normal',letterSpacing:'0.48px'}}> Welcome, Usman Mahmood</h2>
             <h3 className='font-extrabold' style={{marginTop:'40px',color:'#0E0F0E', fontFamily:'Inter', fontSize:'28px', fontStyle:'extra-bold', fontWeight:'800', lineHeight:'normal',letterSpacing:'0.48px'}}>All Assets</h3>
           </div>
-          <div className='right-0 top-0' style={{position:'absolute'}}>
+          <div className='right-0 top-1' style={{position:'absolute'}}>
               <div className='flex flex-col'>
               <div className='grid grid-cols-3'>
                 <div className='cursor-pointer mr-[32px] mt-[45px] w-[40px] h-[40px] items-center justify-center py-2 px-2 hover:bg-teal-300' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', background:'white', boxShadow:'0px 4px 6px 2px rgba(0, 0, 0, 0.25)'}}><HiBellAlert size={25} className= 'items-center justify-center' /></div>
@@ -115,7 +115,7 @@ const Dashboard: React.FC = () => {
                 
               </div>)}
 
-              <div className='cursor-pointer hover:bg-teal-700 bg-[#7FD3BB] mt-[50px] -ml-12 w-[240px] h-[65px] py-5 px-20' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', alignItems:'center', justifyContent:'center'}}><button className='text-white items-center justify-center'><FaPlus className='inline-block text-white' color='white' size={10} /> Add New </button></div>
+              <div className='cursor-pointer hover:bg-teal-700 bg-[#7FD3BB] mt-[55px] -ml-6 w-[220px] h-[65px] py-5 px-16' onClick={() => setSignInPopup(false)} style={{borderRadius:'10px', alignItems:'center', justifyContent:'center'}}><button className='text-white font-bold items-center justify-center'><FaPlus className='inline-block text-white font-bold' color='white' size={10} /> Add New </button></div>
             </div>
           </div>
         </div>
