@@ -75,7 +75,7 @@ function ForgotPasswordDesktopScreen(){
       alert('We have sent you an email to Reset your password');
       e.preventDefault();
     
-    // You can handle form submission here, e.g., validate and send data to the server.
+    //You can handle form submission here, e.g., validate and send data to the server.
   };
   return (
     <div className='bg-gray-200 min-h-screen w-screen overflow-y-auto flex align-middle justify-center items-center'>
