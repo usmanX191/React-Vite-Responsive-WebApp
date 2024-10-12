@@ -1,5 +1,8 @@
 # React + TypeScript + Vite
 ## Weblink: [Live Website](https://usmanx191.github.io/React-Vite-Responsive-WebApp/)
+### Credentials:
+   - Username/Email: usman@gmail.com
+   - Password: usman12345
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
