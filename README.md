@@ -1,10 +1,10 @@
 # React + TypeScript + Vite
 ## Weblink: [Live Website](https://usmanx191.github.io/React-Vite-Responsive-WebApp/)
-### Credentials:
+This is a basic React dashboard application that includes authentication and validation features. It provides a minimal configuration to run React with Vite, supporting Hot Module Replacement (HMR), and includes a set of ESLint rules for code quality.
+
+## Credentials:
    - Username/Email: usman@gmail.com
    - Password: usman12345
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
