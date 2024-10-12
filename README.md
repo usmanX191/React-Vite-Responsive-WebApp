@@ -2,14 +2,14 @@
 ## Weblink: [Live Website](https://usmanx191.github.io/React-Vite-Responsive-WebApp/)
 This is a basic React dashboard application that includes authentication and validation features. It provides a minimal configuration to run React with Vite, supporting Hot Module Replacement (HMR), and includes a set of ESLint rules for code quality.
 
-## Credentials:
-   - Username/Email: usman@gmail.com
-   - Password: usman12345
-
-Currently, two official plugins are available:
+In this App Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Credentials:
+   - Username/Email: usman@gmail.com
+   - Password: usman12345
 
 ## Expanding the ESLint configuration
 
